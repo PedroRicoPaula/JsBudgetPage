@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="lightbox2-2.11.3/dist/css/lightbox.min.css" />
+    <link rel="stylesheet" href="Style/index.css" />
+    <style>
+      body {
+        background-color: rgb(76, 107, 119);
+      }
+      h3 {
+        text-align: center;
+      }
+      div {
+        text-align: center;
+        margin: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="PortfólioImagens.html" target="_blank">About</a></li>
+            <li><a href="feedNoticias.html" target="_blank">Feed</a></li>
+            <li><a href="contactos.html" target="_blank">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <h3>Portfólio de Imagens</h3>
+    <div>
+      <a
+        class="example-image-link"
+        href="Image/Dinâmico.png"
+        data-lightbox="example-1"
+      >
+        <img
+          class="example-image"
+          src="Image/Dinâmico.png"
+          alt="image-1"
+          width="300px"
+        />
+      </a>
+      <a
+        class="example-image-link"
+        href="Image/LandingPage.png"
+        data-lightbox="example-1"
+      >
+        <img
+          class="example-image"
+          src="Image/LandingPage.png"
+          alt="image-1"
+          width="300px"
+        />
+      </a>
+      <a
+        class="example-image-link"
+        href="Image/LojaVirtual.png"
+        data-lightbox="example-1"
+      >
+        <img
+          class="example-image"
+          src="Image/LojaVirtual.png"
+          alt="image-1"
+          width="300px"
+        />
+      </a>
+    </div>
+    <script src="lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+      lightbox.option({
+        resizeDuration: 200,
+        wrapAround: true,
+      });
+    </script>
+  </body>
+</html>

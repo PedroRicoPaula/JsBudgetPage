@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caso Prático</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="Style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Scripts -->
+    <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- Body -->
+  <body background="Image/blue.jpg">
+    <!-- NavBar -->
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="PortfólioImagens.html" target="_blank">About</a></li>
+            <li><a href="feedNoticias.html" target="_blank">Feed</a></li>
+            <li><a href="contactos.html" target="_blank">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="caixa-orcamento pb-5" id="dados">
+      <!-- Dados -->
+      <h1>Dados</h1>
+      <p id="preencher">Nome:<input type="text" required /></p>
+      <p id="preencher">Apelido:<input type="text" required /></p>
+      <p id="preencher">Telemóvel:<input type="text" required /></p>
+
+      <!-- Pedido de Orçamento -->
+      <h3>Faça o seu orçamento</h3>
+
+      <form method="POST" onchange="calcularorcamento()" name="formulario">
+        <td>Tipo de página web:</td>
+        <select
+          name="tipopagina"
+          id="tipopagina"
+          onchange="carregarImagem(this.value)"
+          required
+        >
+          <option value="0" id="opção">Selecione uma Opção</option>
+          <option value="500" id="tipo1">Site Dinâmico</option>
+          <option value="1000" id="tipo2">Loja Virtual</option>
+          <option value="1500" id="tipo3">Landing Page</option>
+        </select>
+
+        <input type="text" id="valor-tipopagina" name="valor-tipopagina" />
+      </form>
+
+      <!-- Separadores -->
+      <h1>Marque as páginas que deseja adicionar ao seu website</h1>
+      <form id="checkboxGroup">
+        <input
+          type="checkbox"
+          name="checkbox1"
+          value="400"
+          onclick="calcularorcamento()"
+        />
+        Quem Somos<br />
+        <input
+          type="checkbox"
+          name="checkbox2"
+          value="400"
+          onclick="calcularorcamento()"
+        />
+        Onde Estamos<br />
+        <input
+          type="checkbox"
+          name="checkbox3"
+          value="400"
+          onclick="calcularorcamento()"
+        />
+        Galeria de fotografias<br />
+        <input
+          type="checkbox"
+          name="checkbox4"
+          value="400"
+          onclick="calcularorcamento()"
+        />
+        eCommerce<br />
+        <input
+          type="checkbox"
+          name="checkbox5"
+          value="400"
+          onclick="calcularorcamento()"
+        />
+        Gestão interna<br />
+      </form>
+
+      <p>Escolha o prazo em meses</p>
+      <tr>
+        <td>Prazo em meses:</td>
+        <td>
+          <input type="number" id="prazo" onclick="calcularorcamento()" />
+        </td>
+      </tr>
+
+      <!-- Orçamento -->
+      <h3>Orçamento estimado</h3>
+      <p>(É um valor meramente indicativo, pode sofrer alterações)</p>
+      <p id="resultado"></p>
+      <input
+        type="submit"
+        value="Encomendar"
+        class="botao"
+        onclick="confirmar(preencher)"
+      />
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </body>
+</html>
